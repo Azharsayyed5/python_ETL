@@ -1,0 +1,27 @@
+# Table creation query
+
+CREATE TABLE  <table_name>
+	(
+	customer_id VARCHAR(18) NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	open_date DATE NOT NULL,
+	consulted_date DATE,
+	vac_id CHAR(5),
+	dr_name CHAR(255),
+	state CHAR(5),
+	country CHAR(5),
+	dob DATE,
+	is_active CHAR(1),
+	CONSTRAINT customer_pk PRIMARY KEY (customer_id)
+);
+
+
+# Insert query for insertion into staging and country table
+
+INSERT INTO <table_table> (name, customer_id, open_date, consulted_date, vac_id, dr_name, state, country, dob, is_active) VALUES
+('xyz', '123456', '20121015', '20121014', 'vbn', 'abc', 'pl', 'ind', '20121015', 'A')
+
+# Grou-by country
+
+SELECT * FROM <DB_NAME>.<TABLE_NAME>
+GROUPBY country;
